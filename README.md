@@ -10,11 +10,19 @@ To do this, use Maven to build and package the JAR and then you can run it:
 ```sh
 mvn package
 ```
+or
+```sh
+gradlew shadowjar
+```
 
 This will download dependencies, compile the code, run the tests, and then package it into a JAR file that it will put in the `target` directory. To run it, do the following:
 
 ```sh
 java -jar target/blackjack-1.0.0.jar
+```
+or
+```sh
+java -jar build/lib/blackjack-all.jar
 ```
 
 ## Rules of Blackjack
