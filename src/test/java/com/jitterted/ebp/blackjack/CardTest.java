@@ -1,9 +1,8 @@
 package com.jitterted.ebp.blackjack;
 
-import com.jitterted.ebp.blackjack.Card;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.fusesource.jansi.Ansi.ansi;
 
 class CardTest {
@@ -12,24 +11,21 @@ class CardTest {
   public void withNumberCardHasNumericValueOfTheNumber() throws Exception {
     Card card = new Card("don't care", "7");
 
-    assertThat(card.rankValue())
-        .isEqualTo(7);
+    assertThat(card.rankValue()).isEqualTo(7);
   }
 
   @Test
   public void withValueOfQueenHasNumericValueOf10() throws Exception {
     Card card = new Card("X", "Q");
 
-    assertThat(card.rankValue())
-        .isEqualTo(10);
+    assertThat(card.rankValue()).isEqualTo(10);
   }
 
   @Test
   public void withAceHasNumericValueOf1() throws Exception {
     Card card = new Card("don't care", "A");
 
-    assertThat(card.rankValue())
-        .isEqualTo(1);
+    assertThat(card.rankValue()).isEqualTo(1);
   }
 
   @Test
@@ -42,10 +38,7 @@ class CardTest {
     String ansiRedString = ansi().fgRed().toString();
 
     // then we expect a red color ansi sequence
-    assertThat(heartsCard.display())
-        .contains(ansiRedString);
-    assertThat(diamondsCard.display())
-        .contains(ansiRedString);
+    assertThat(heartsCard.display()).contains(ansiRedString);
+    assertThat(diamondsCard.display()).contains(ansiRedString);
   }
-
 }
