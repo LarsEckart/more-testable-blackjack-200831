@@ -4,6 +4,12 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -26,9 +32,6 @@ tasks.withType(JavaCompile) {
     options.compilerArgs.add("-Xlint:all")
     options.incremental = true
     options.encoding = 'UTF-8'
-
-    if (jdkWithPreviewFeatures())
-        options.compilerArgs.add("--enable-preview")
 }
 
 test {
@@ -38,18 +41,10 @@ test {
     }
     finalizedBy jacocoTestReport
 
-    if (jdkWithPreviewFeatures())
-        jvmArgs("--enable-preview")
-}
-
-static def jdkWithPreviewFeatures() {
-    def currentJvm = org.gradle.internal.jvm.Jvm.current()
-    def matcher = currentJvm =~ /^\d+/
-    return matcher[0].toInteger() > 11
 }
 
 jacoco {
-    toolVersion = "0.8.6"
+    toolVersion = "0.8.7"
 }
 
 jacocoTestReport {
