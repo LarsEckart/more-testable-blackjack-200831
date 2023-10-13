@@ -25,7 +25,7 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-java:7.14.0'
     testImplementation 'io.cucumber:cucumber-junit:7.14.0'
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.10.0'
-    testImplementation 'com.approvaltests:approvaltests:21.1.0'
+    testImplementation 'com.approvaltests:approvaltests:22.0.0'
 }
 
 tasks.withType(JavaCompile) {
