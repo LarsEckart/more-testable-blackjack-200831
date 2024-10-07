@@ -21,7 +21,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.11.2'
     testImplementation 'org.assertj:assertj-core:3.26.3'
-    testImplementation 'io.cucumber:cucumber-java:7.19.0'
+    testImplementation 'io.cucumber:cucumber-java:7.20.0'
     testImplementation 'io.cucumber:cucumber-junit:7.20.0'
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.11.1'
     testImplementation 'com.approvaltests:approvaltests:24.7.0'
