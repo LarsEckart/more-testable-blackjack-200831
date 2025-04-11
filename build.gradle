@@ -23,7 +23,7 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.27.3'
     testImplementation 'io.cucumber:cucumber-java:7.22.0'
     testImplementation 'io.cucumber:cucumber-junit:7.22.0'
-    testImplementation 'org.junit.vintage:junit-vintage-engine:5.11.4'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.12.1'
     testImplementation 'com.approvaltests:approvaltests:24.20.0'
 }
 
